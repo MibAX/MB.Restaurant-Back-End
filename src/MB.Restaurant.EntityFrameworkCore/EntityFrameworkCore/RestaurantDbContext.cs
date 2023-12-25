@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MB.Restaurant.Ingredients;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -24,6 +26,7 @@ public class RestaurantDbContext :
     ITenantManagementDbContext
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
+    public DbSet<Ingredient> Ingredients { get; set; }
 
     #region Entities from the modules
 
@@ -76,11 +79,13 @@ public class RestaurantDbContext :
 
         /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(RestaurantConsts.DbTablePrefix + "YourEntities", RestaurantConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        builder.Entity<Ingredient>(b =>
+        {
+            b.ToTable(RestaurantConsts.DbTablePrefix + "Ingredients", RestaurantConsts.DbSchema);
+            b.ConfigureByConvention();
+
+            b.Property(i => i.Name).IsRequired().HasMaxLength(40);
+            b.Property(i => i.Description).HasMaxLength(200);
+        });
     }
 }
