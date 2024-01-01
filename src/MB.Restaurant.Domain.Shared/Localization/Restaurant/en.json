@@ -5,6 +5,8 @@
     "Welcome": "Welcome",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     "Menu:Ingredients": "Ingredients",
-    "CreatedSuccessfully": "{0} has been created successfully"
+    "CreatedSuccessfully": "{0} has been created successfully",
+    "UpdatedSuccessfully": "{0} has been updated successfully",
+    "DeletedSuccessfully": "{0} has been deleted successfully"
   }
 }
