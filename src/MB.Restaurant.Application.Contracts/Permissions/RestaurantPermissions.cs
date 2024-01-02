@@ -2,8 +2,21 @@
 
 public static class RestaurantPermissions
 {
-    public const string GroupName = "Restaurant";
+    public const string RestaurantGroup = "Restaurant";
 
-    //Add your own permission names. Example:
-    //public const string MyPermission1 = GroupName + ".MyPermission1";
+    public static class Ingredients
+    {
+        public const string Default = RestaurantGroup + ".Ingredients";
+        public const string Create = Default + ".Create";
+        public const string Edit = Default + ".Edit";
+        public const string Delete = Default + ".Delete";
+    }
+
+    public static class Meals
+    {
+        public const string Default = RestaurantGroup + ".Meals";
+        public const string Create = Default + ".Create";
+        public const string Edit = Default + ".Edit";
+        public const string Delete = Default + ".Delete";
+    }
 }

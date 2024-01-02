@@ -1,12 +1,24 @@
+
 {
   "culture": "en",
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
-    "Menu:Ingredients": "Ingredients",
     "CreatedSuccessfully": "{0} has been created successfully",
     "UpdatedSuccessfully": "{0} has been updated successfully",
-    "DeletedSuccessfully": "{0} has been deleted successfully"
+    "DeletedSuccessfully": "{0} has been deleted successfully",
+    "Permission:Restaurant": "Restaurant",
+    "Menu:Ingredients": "Ingredients",
+    "Permission:Ingredients": "Ingredient Management",
+    "Permission:Ingredients.Create": "Creating new ingredients",
+    "Permission:Ingredients.Edit": "Editing the ingredients",
+    "Permission:Ingredients.Delete": "Deleting the ingredients",
+    "Menu:Meals": "Meals",
+    "Permission:Meals": "Meal Management",
+    "Permission:Meals.Create": "Creating new meals",
+    "Permission:Meals.Edit": "Editing the meals",
+    "Permission:Meals.Delete": "Deleting the meals"
+
   }
 }
